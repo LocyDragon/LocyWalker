@@ -1,0 +1,6 @@
+name: LocyWalker
+main: com.locydragon.lw.LocyWalker
+version: 1.0.0
+author: LocyDragon
+commands:
+  lw:
