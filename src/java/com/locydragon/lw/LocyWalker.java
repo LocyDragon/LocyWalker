@@ -8,6 +8,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class LocyWalker extends JavaPlugin {
+	public static int walkTime = 0;
+	public static int showTime = 0;
+	public static String effect = null;
 	public static LocyWalker instance;
 	@Override
 	public void onEnable(){
@@ -18,6 +21,9 @@ public class LocyWalker extends JavaPlugin {
 		);
         Bukkit.getPluginCommand("lw").setExecutor(new WalkerCommand());
         instance = this;
+        walkTime = instance.getConfig().getInt("MaxFindTime");
+		showTime = instance.getConfig().getInt("ShowTime");
+		effect = instance.getConfig().getString("EffectType");
 	}
 	public static void song(String... info) {
 		Arrays.stream(info).forEach(each -> Bukkit.getLogger().info(each));

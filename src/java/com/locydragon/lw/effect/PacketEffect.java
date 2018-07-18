@@ -7,6 +7,7 @@ import com.comphenix.protocol.events.PacketContainer;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
+import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
@@ -30,7 +31,7 @@ public class PacketEffect {
 			exc.printStackTrace();
 		}
 	}
-	public static void sendPacketEffect(EffectTypeEnum type, Player who, Set<Location> where) {
+	public static void sendPacketEffect(EffectTypeEnum type, Player who, List<Location> where) {
 		where.stream().forEach(loc -> sendPacketEffect(type, who, loc));
 	}
 }

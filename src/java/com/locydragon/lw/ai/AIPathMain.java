@@ -1,5 +1,6 @@
 package com.locydragon.lw.ai;
 
+import com.locydragon.lw.LocyWalker;
 import com.locydragon.lw.util.Data;
 import com.locydragon.lw.util.MinHeap;
 import org.bukkit.Location;
@@ -18,7 +19,8 @@ public class AIPathMain {
 			return returnType;
 		}
 		Set<Location> wasVisited = new HashSet<>();
-		int time = 1000; //需要修改
+		int time = LocyWalker.walkTime;
+		//需要修改
 		MinHeap heap = new MinHeap();
 		heap.add(new Data(AA, 0, 0 , null));
 		Data lastOne = null;
